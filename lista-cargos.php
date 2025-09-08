@@ -31,7 +31,7 @@ $result1 = mysqli_query($conn, $sql);
               echo "<td>" . $row["TetoSalarial"] . "</td>";
               echo "<td>
                       <a href='salvar-cargos.php?id=" . $row["CargoID"] . "' class='btn btn-edit'>Editar</a>
-                      <a href='excluir-cargos.php?id=" . $row["CargoID"] . "' class='btn btn-delete'>Excluir</a>
+                      <a href='cargos.php?id=" . $row["CargoID"] . "' class='btn btn-delete'>Excluir</a>
                     </td>";
               echo "</tr>";
           }
