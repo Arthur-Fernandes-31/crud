@@ -8,9 +8,9 @@ $acao = $_GET['acao'];
 $id = $_GET['id'];
 // validacao
 switch ($acao) {
-    case 'value':
-        $sql = "DELETE FROM cargos WHERE CargoID = $id";
-
+    case 'excluir':
+        $sql = 'DELETE FROM cargos WHERE CargoID ='.$id;
+        
         mysqli_query($conn, $sql);
         header("Location: ../lista-cargos.php");
         break;

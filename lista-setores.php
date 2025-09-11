@@ -36,7 +36,7 @@ $result2 = mysqli_query($conn, $sql);
               echo "<td>" . $row["Cor"] . "</td>";
               echo "<td>
                       <a href='salvar-setores.php?id=" . $row["SetorID"] . "' class='btn btn-edit'>Editar</a>
-                      <a href='excluir-setores.php?id=" . $row["SetorID"] . "' class='btn btn-delete'>Excluir</a>
+                      <a href='./action/setores.php?id=" . $row["SetorID"] . "&acao=excluir' class='btn btn-delete'>Excluir</a>
                     </td>";
               echo "</tr>";
           }

@@ -49,7 +49,7 @@ $result3 = mysqli_query($conn, $sql);
               echo "<td>" . $row["NomeSetor"] . "</td>";
               echo "<td>
                       <a href='salvar-funcionarios.php?id=" . $row["FuncionarioID"] . "' class='btn btn-edit'>Editar</a>
-                      <a href='excluir-funcionarios.php?id=" . $row["FuncionarioID"] . "' class='btn btn-delete'>Excluir</a>
+                      <a href='./action/funcionarios.php?id=" . $row["FuncionarioID"] . "&acao=excluir' class='btn btn-delete'>Excluir</a>
                     </td>";
               echo "</tr>";
           }

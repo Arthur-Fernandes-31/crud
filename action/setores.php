@@ -5,11 +5,14 @@ include_once   '../include/conexao.php';
 
 // captura a acao dos dados
 $acao = $_GET['acao'];
-
+$id = $_GET['id'];
 // validacao
 switch ($acao) {
-    case 'value':
-        # code...
+    case 'excluir':
+        $sql = 'DELETE FROM setor WHERE SetorID ='.$id;
+        
+        mysqli_query($conn, $sql);
+        header("Location: ../lista-setores.php");
         break;
     
     default:

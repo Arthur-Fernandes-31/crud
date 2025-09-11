@@ -5,11 +5,14 @@ include_once   '../include/conexao.php';
 
 // captura a acao dos dados
 $acao = $_GET['acao'];
-
+$id = $_GET['id'];
 // validacao
 switch ($acao) {
-    case 'value':
-        # code...
+    case 'excluir':
+        $sql = 'DELETE FROM categorias WHERE CategoriaID ='.$id;
+        
+        mysqli_query($conn, $sql);
+        header("Location: ../lista-categorias.php");
         break;
     
     default:

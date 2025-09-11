@@ -4,7 +4,7 @@ include_once './include/logado.php';
 include_once './include/conexao.php';
 include_once './include/header.php';
 
-$sql = "SELECT * FROM categorias";
+$sql = "SELECT CategoriaID, Nome FROM categorias";
 $result4 = mysqli_query($conn, $sql);
 ?>
   <main>
@@ -28,7 +28,7 @@ $result4 = mysqli_query($conn, $sql);
               echo "<td>" . $row["Nome"] . "</td>";
               echo "<td>
                       <a href='salvar-categorias.php?id=" . $row["CategoriaID"] . "' class='btn btn-edit'>Editar</a>
-                      <a href='excluir-categorias.php?id=" . $row["CategoriaID"] . "' class='btn btn-delete'>Excluir</a>
+                      <a href='./action/categorias.php?id=" . $row["CategoriaID"] . "&acao=excluir' class='btn btn-delete'>Excluir</a>
                     </td>";
               echo "</tr>";
           }

@@ -4,7 +4,7 @@ include_once './include/logado.php';
 include_once './include/conexao.php';
 include_once './include/header.php';
 
-$sql = "SELECT * FROM cargos";
+$sql = "SELECT CargoID, Nome, TetoSalarial FROM cargos";
 $result1 = mysqli_query($conn, $sql);
 
 ?>
@@ -31,7 +31,7 @@ $result1 = mysqli_query($conn, $sql);
               echo "<td>" . $row["TetoSalarial"] . "</td>";
               echo "<td>
                       <a href='salvar-cargos.php?id=" . $row["CargoID"] . "' class='btn btn-edit'>Editar</a>
-                      <a href='cargos.php?id=" . $row["CargoID"] . "' class='btn btn-delete'>Excluir</a>
+                      <a href='./action/cargos.php?id=" . $row["CargoID"] . "&acao=excluir' class='btn btn-delete'>Excluir</a>
                     </td>";
               echo "</tr>";
           }
