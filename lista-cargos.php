@@ -38,7 +38,7 @@ $result1 = mysqli_query($conn, $sql);
         ?>
           </tbody>
         </table>
-      </div> 
+      </div> ''
   </main>
   
   <?php 
